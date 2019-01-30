@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toy City</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <style>
+             .mini-footer {
+             background:#192027;
+             text-align:center;
+             padding:32px 0
+            }
+            .mini-footer p {
+             margin:0;
+             line-height:26px;
+             font-size:15px;
+             color:#999
+            }
+            .mini-footer p a {
+             color:#5867dd
+            }
+            .mini-footer p a:hover {
+             color:#34bfa3
+            }
+            
+            body{
+		background-color:maroon;
+            }
+            .contact{
+                padding: 4%;
+                height: 400px;
+            }
+            .col-md-3{
+                background: #ff9b00;
+                padding: 4%;
+                border-top-left-radius: 0.5rem;
+                border-bottom-left-radius: 0.5rem;
+            }
+            .contact-info{
+                margin-top:10%;
+            }
+            .contact-info img{
+                margin-bottom: 15%;
+            }
+            .contact-info h2{
+                margin-bottom: 10%;
+            }
+            .col-md-9{
+                background: #fff;
+                padding: 3%;
+                border-top-right-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+            .contact-form label{
+                font-weight:600;
+            }
+            .contact-form button{
+                background: #CE3E43;
+                color: #fff;
+                font-weight: 600;
+                width: 25%;
+            }
+            .contact-form button:focus{
+                box-shadow:none;
+            }
+            html, body {
+              height:100%;
+              padding: 0;
+              margin: 0;
+            }
+
+            body:before {
+              background:url(images/contactbg.jpg) no-repeat center center fixed;
+              display: block; content:""; position: absolute; z-index:-1;
+              top:0; left: 0; right: 0; height: 100%;
+              opacity:.5;
+            }
+        </style>
+         <script>
+             $("#btnLogin").click(function(event) {
+
+                //Fetch form to apply custom Bootstrap validation
+                var form = $("#formLogin")
+
+                if (form[0].checkValidity() === false) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.addClass('was-validated');
+        </script>
+         </head>
+    <body>
+         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+          <img src="images/toylogo2.GIF" style="height: 40px; width: 80px">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+               <form class="form-inline">
+            <a class="nav-item" href="#loginModal" role="button" class="btn btn-warning btn-lg" data-toggle="modal">Login</a>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn  my-2 my-sm-0" style="color: #CE3E43" type="submit">Search</button>
+          </form>
+            </span>
+          </div>
+        </nav>
+        
+         <div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+				<h2>Contact Us</h2>
+				<h4>We would love to hear from you !</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">First Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">Last Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="email">Email:</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="comment">Comment:</label>
+				  <div class="col-sm-10">
+					<textarea class="form-control" rows="5" id="comment" required></textarea>
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                    <div class="form-group">
+                        <a href="" class="float-right">New user?</a>
+                        <label for="uname1">Username</label>
+                        <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                        <div class="invalid-feedback">Oops, you missed this one.</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                        <div class="invalid-feedback">Enter your password too!</div>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="rememberMe">
+                      <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                    </div>
+                    <div class="form-group py-4">
+                        <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button type="submit" style="color: #CE3E43" class=" btn-lg float-right" id="btnLogin">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    
+        
+        <footer style="margin-top: 500px;">
+          <div class="mini-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="copyright-text">
+                    <p>© 2018
+                      <a href="#">ToyCity</a>. All rights reserved. Created by
+                      <a href="#">Code School 8: 2018</a>
+                    </p>
+                  </div>
+
+                  <div class="go_top">
+                    <span class="icon-arrow-up"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </body>

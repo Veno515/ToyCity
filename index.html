@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toy City</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+            
+            .mini-footer {
+             background:#192027;
+             text-align:center;
+             padding:32px 0
+            }
+            .mini-footer p {
+             margin:0;
+             line-height:26px;
+             font-size:15px;
+             color:#999
+            }
+            .mini-footer p a {
+             color:#5867dd
+            }
+            .mini-footer p a:hover {
+             color:#34bfa3
+            }
+        </style>
+        <script>
+             $("#btnLogin").click(function(event) {
+
+                //Fetch form to apply custom Bootstrap validation
+                var form = $("#formLogin")
+
+                if (form[0].checkValidity() === false) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.addClass('was-validated');
+        </script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+          <img src="images/toylogo2.GIF" style="height: 40px; width: 80px">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+               <form class="form-inline">
+            <a class="nav-item" href="#loginModal" role="button" class="btn btn-warning btn-lg" data-toggle="modal">Login</a>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn  my-2 my-sm-0" style="color: #CE3E43" type="submit">Search</button>
+          </form>
+            </span>
+          </div>
+        </nav>
+        <div class="container">
+            <hr>
+            <div class="row">
+              <div class="column">
+                <img src="images/download1.jpg" style="height:180px">
+                <h4>Avengers</h4>
+                <h5>Price: ₦2,800.00</h5>
+                  <button class="btn btn-danger"  onMouseover="alert('Available for sale!')">Click to Buy</button>
+              </div>
+              <div class="column">
+                <img src="images/download.jpg" style="height: 180px">
+                <h4>Ninja(Upgraded)</h4>
+                <h5>Price: ₦4,400.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Not available at the moment. Will be available shortly...')">Click to Buy</button>
+              </div>
+              <div class="column">
+               <img src="images/download2.jpg" style="height: 180px">
+                <h4>Avengers 2.0</h4>
+                <h5>Price: ₦5,000.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Available for sale!')">Click to Buy</button>
+              </div>
+                <hr>
+               <div class="column">
+               <img src="images/download3.jpg" style="height: 180px">
+                <h4>Ninja</h4>
+                <h5>Price: ₦2,400.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Available for sale!')">Click to Buy</button>
+              </div>
+              <div class="column">
+                <img src="images/images.jpg" style="height: 180px">
+                <h4>Spider Man</h4>
+                <h5>Price: ₦6,400.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Not available at the moment. Will be available shortly...')">Click to Buy</button>
+              </div>
+              <div class="column">
+               <img src="images/images1.jpg" style="height: 180px">
+                <h4>Avengers(Infinity War)</h4>
+                <h5>Price: ₦2,400.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Not available at the moment. Will be available shortly...')">Click to Buy</button>
+              </div> 
+               <div class="column">
+               <img src="images/images2.jpg" style="height: 180px">
+                <h4>Toy House</h4>
+                <h5>Price: ₦3,200.00</h5>
+                <button class="btn btn-danger"  onMouseover="alert('Available for sale!')">Click to Buy</button>
+              </div> 
+            </div>
+          
+        </div>
+        
+<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                    <div class="form-group">
+                        <a href="" class="float-right">New user?</a>
+                        <label for="uname1">Username</label>
+                        <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                        <div class="invalid-feedback">Oops, you missed this one.</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                        <div class="invalid-feedback">Enter your password too!</div>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="rememberMe">
+                      <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                    </div>
+                    <div class="form-group py-4">
+                        <button class="btn btn-outline-secondary btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                        <button type="submit" style="color: #CE3E43" class=" btn-lg float-right" id="btnLogin">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<footer>
+  <div class="mini-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright-text">
+            <p>© 2018
+              <a href="#">ToyCity</a>. All rights reserved. Created by
+              <a href="#">Code School 8: 2018</a>
+            </p>
+          </div>
+
+          <div class="go_top">
+            <span class="icon-arrow-up"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </body>
+</html>
